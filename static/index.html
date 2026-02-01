@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSE Comprehensive Demo</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Server-Sent Events Comprehensive Demo</h1>
+    
+    <div class="container">
+        <h2>Basic Stream with Heartbeat</h2>
+        <button onclick="connectBasic()">Connect</button>
+        <button onclick="disconnectBasic()">Disconnect</button>
+        <span id="basic-status" class="disconnected">Disconnected</span>
+        <div id="basic-output" class="output"></div>
+    </div>
+    
+    <div class="container">
+        <h2>Log Stream</h2>
+        <button onclick="connectLogs()">Connect</button>
+        <button onclick="disconnectLogs()">Disconnect</button>
+        <span id="logs-status" class="disconnected">Disconnected</span>
+        <div id="logs-output" class="output"></div>
+    </div>
+    
+    <div class="container">
+        <h2>Progress Tracker</h2>
+        <button onclick="connectProgress()">Start Task</button>
+        <button onclick="disconnectProgress()">Cancel</button>
+        <span id="progress-status" class="disconnected">Ready</span>
+        <div id="progress-output" class="output"></div>
+    </div>
+    
+    <div class="container">
+        <h2>Multi-Event Stream</h2>
+        <button onclick="connectMulti()">Connect</button>
+        <button onclick="disconnectMulti()">Disconnect</button>
+        <span id="multi-status" class="disconnected">Disconnected</span>
+        <div id="multi-output" class="output"></div>
+    </div>
+    
+    <div class="container">
+        <h2>Chat Stream</h2>
+        <input type="text" id="chat-input" placeholder="Enter message" style="width: 300px;">
+        <button onclick="connectChat()">Send</button>
+        <button onclick="disconnectChat()">Stop</button>
+        <div id="chat-output" class="output"></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
